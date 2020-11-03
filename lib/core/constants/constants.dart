@@ -1,0 +1,1 @@
+const EVENT_TITLE = 'EVENT_TITLE';

@@ -1,0 +1,40 @@
+{
+  "button": {
+    "confirm": "OK",
+    "cancel": "Anuluj"
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "appSettings": "Applikacja",
+    "appSettingsDesc": "Przejdź do ustawień systemowych aplikacji",
+    "notifications": "Powiadomienia",
+    "notificationsDesc": "todo",
+    "signOut": "Wyloguj",
+    "signOutDesc": "todo"
+  },
+  "home": {
+    "title": "Home",
+    "noChat": "Empty"
+  },
+  "login": {
+    "title": "Logowanie",
+    "button": "Login",
+    "googleButton": "Logowanie z Google"
+  },
+  "email": {
+    "hint": "example@gmail.com",
+    "error": {
+      "invalid": "Nipoprawny email"
+    }
+  },
+  "password": {
+    "hint": "P@ssw0rd",
+    "error": {
+      "empty": "Hasło wymagane",
+      "not_match": "Hasła są różne",
+      "short": "Hasło za krótkie"
+    }
+  },
+  "submitReset": "Resetuj",
+  "forgotPassword": "Reset hasła"
+}

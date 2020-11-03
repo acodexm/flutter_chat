@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAuthenticated() {
+      return request.auth.uid != null
+    }
+    function isOwner(res) {
+      return res.data.createdBy == request.auth.uid
+    }
+    function hasRole(role){
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == role
+    }
+    function isOwnerOrHasRole(res, role){
+        return isOwner(res) || hasRole(role)
+    }
+    function isOwnerOrAdmin(userId){
+        return request.auth.uid == userId || hasRole('admin')
+    }
+    // Private user profiles
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isOwnerOrAdmin(userId);
+      allow update: if isOwnerOrAdmin(userId);
+      allow delete: if hasRole('admin');
+      match /{allChildren=**} {
+        allow read: if isOwnerOrAdmin(userId);
+        allow create: if isOwnerOrAdmin(userId);
+        allow update: if isOwnerOrAdmin(userId);
+        allow delete: if hasRole('admin');
+      }
+    }
+
+    // Public user profiles
+    match /users_public/{userId} {
+      allow read;
+      allow write: if false; // only written to by indexUser cloud function
+    }
+
+    // chats
+    match /chats/{chatId} {
+      allow read: if isAuthenticated();
+      allow create, update: if isAuthenticated();
+      allow delete: if hasRole('admin');
+      match /{allChildren=**} {
+       allow read: if isAuthenticated();
+       allow update, create: if isAuthenticated();
+       allow delete: if hasRole('admin');
+      }
+    }
+    // events
+    match /events/{eventId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow delete, update: if isOwnerOrHasRole(request.resource, 'admin');
+      match /{allChildren=**} {
+       allow read: if isAuthenticated();
+       allow create: if isAuthenticated();
+       allow update, delete: if isOwnerOrHasRole(get(/databases/$(database)/documents/events/$(eventId)), 'admin');
+      }
+    }
+  }
+}

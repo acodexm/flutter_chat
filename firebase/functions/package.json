@@ -1,0 +1,33 @@
+{
+  "name": "functions",
+  "scripts": {
+    "build": "webpack",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy-fn": "firebase deploy --only functions",
+    "deploy-db": "firebase deploy --only database",
+    "deploy-stor": "firebase deploy --only storage",
+    "deploy-fire": "firebase deploy --only firestore",
+    "deploy-all": "firebase deploy",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "firebase-admin": "^8.13.0",
+    "firebase-functions": "^3.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.6",
+    "ts-loader": "^6.2.2",
+    "dotenv-webpack": "^2.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.0",
+    "firebase-functions-test": "^0.2.1"
+  },
+  "private": true
+}

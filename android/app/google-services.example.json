@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "41021996064",
+    "firebase_url": "https://example.firebaseio.com",
+    "project_id": "example",
+    "storage_bucket": "example.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:example:android:example",
+        "android_client_info": {
+          "package_name": "com.acodexm.geochat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "example-example.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acodexm.geochat",
+            "certificate_hash": "example"
+          }
+        },
+        {
+          "client_id": "example-example.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "example"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "example-example.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

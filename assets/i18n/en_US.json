@@ -1,0 +1,95 @@
+{
+  "profile": {
+    "title": "Profile",
+    "displayName": "Name",
+    "about": "About me"
+  },
+  "settings": {
+    "title": "Settings",
+    "appSettings": "Application",
+    "appSettingsDesc": "todo",
+    "notifications": "Notifications",
+    "notificationsDesc": "todo",
+    "signOut": "Sign out",
+    "signOutDesc": "todo"
+  },
+  "home": {
+    "title": "Chat",
+    "noChat": "No chats yet ;( go to explore tab :D"
+  },
+  "login": {
+    "title": "Login"
+  },
+  "reset": {
+    "title": "Reset password"
+  },
+  "register": {
+    "title": "Register"
+  },
+  "button": {
+    "ok": "OK",
+    "confirm": "Confirm",
+    "send": "Send",
+    "create": "Create",
+    "delete": "Delete",
+    "add": "Add",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "register": "Register",
+    "reset": "Reset",
+    "forgotPassword": "Forgot password",
+    "update": "Update",
+    "login": "Login",
+    "loginGoogle": "Login with Google",
+    "pickDate": "Pick Date"
+  },
+  "value": {
+    "error": {
+      "empty": "Field required"
+    }
+  },
+  "email": {
+    "label": "Email",
+    "hint": "example@gmail.com",
+    "error": {
+      "invalid": "Invalid email"
+    }
+  },
+  "password": {
+    "label": "Password",
+    "hint": "P@ssw0rd",
+    "confirm": {
+      "label": "Repeat password",
+      "hint": "****"
+    },
+    "error": {
+      "empty": "Password is required",
+      "not_match": "Password don't match",
+      "short": "Password too short! Minimum {min} characters"
+    }
+  },
+  "dialogs": {
+    "singOut": {
+      "title": "Sing out",
+      "description": "Are you sure You want to sing out from the account?"
+    },
+    "chat": {
+      "title": "Chat room title",
+      "description": "Description"
+    }
+  },
+  "snackbars": {
+  },
+  "toasts": {
+    "onExit": "Press again to exit",
+    "onLoginFailed": "Something went wrong, try again",
+    "onRegisterFailed": "Something went wrong, try again",
+    "onResetFailed": "Something went wrong, try again"
+  },
+  "notifications": {
+  },
+  "routes": {
+    "unauthorized": "User is not authorised to access this page",
+    "notFound": "No route defined for {route}"
+  }
+}
